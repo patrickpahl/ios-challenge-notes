@@ -11,13 +11,11 @@ import UIKit
 class DetailViewController: UIViewController {
 
     var note: Note?
-    
+    //Used for prepare for segue.
 
     @IBOutlet weak var noteTitle: UITextField!
     
     @IBOutlet weak var bodyText: UITextView!
-    
-    
     
     
     
@@ -35,15 +33,12 @@ class DetailViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     //   if let newNote = self.note{
-    //      updateViewWith(newNote)
-    //   }
+       if let newNote = self.note{
+         updateViewWith(newNote)
+     }
     }
 
     override func didReceiveMemoryWarning() {
